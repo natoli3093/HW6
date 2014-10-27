@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="~/css/stylesheet.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -41,17 +42,18 @@
     
         <br />
         <h1>Wicked Easy Recipes</h1>
-        Using 5 Ingredients or Less!<br />
-        <br />
-        <br />
-        <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
-        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
-        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ContactUs.aspx">Contact</asp:HyperLink>
-    
+        <h2>Using 5 Ingredients or Less!</h2><br />
+        
+    <h4>
+       <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>&nbsp; |&nbsp;
+       <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>&nbsp; |&nbsp;
+       <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>&nbsp; |&nbsp;
+       <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ContactUs.aspx">Contact</asp:HyperLink>
+        </h4>
     </div>
         <p>
-            <asp:FormView ID="FormView1" runat="server" DataKeyNames="recipe_ID" DataSourceID="SqlDataSource1" DefaultMode="Insert" Height="270px" Width="679px">
+            <asp:FormView ID="FormView1" runat="server" DataKeyNames="recipe_ID" DataSourceID="SqlDataSource1" DefaultMode="Insert" Height="270px" Width="679px"
+                cssclass="formview">
                 <EditItemTemplate>
                   
                 </EditItemTemplate>
@@ -151,6 +153,9 @@
                 </ItemTemplate>
             </asp:FormView>
         </p>
+         <div id="footer">
+            <p>&copy; 2014 Kyle Natoli - Assignment for Software Design and Development</p>
+        </div>
     </form>
 </body>
 </html>

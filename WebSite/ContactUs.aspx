@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head runat="server">
+    <link rel="stylesheet" type="text/css" href="~/css/stylesheet.css" />
     <title>Web Contact Form</title>
 </head>
 
@@ -15,15 +16,17 @@
         <% If Not IsPostBack Then%>
 
         <h1>Wicked Easy Recipes</h1>
-        Using 5 Ingredients or Less!<br />
+        <h2>Using 5 Ingredients or Less!</h2>
+            <br />
+        <h4>
+       <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>&nbsp; |&nbsp;
+       <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>&nbsp; |&nbsp;
+       <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>&nbsp; |&nbsp;
+       <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ContactUs.aspx">Contact</asp:HyperLink>
+        </h4>
         <br />
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
-        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
-        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
-        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/ContactUs.aspx">Contact</asp:HyperLink>
         <br />
-        <br />
-
+        <h4>
         Your email address:<br />
         <asp:TextBox ID="senderAddress" runat="server"></asp:TextBox>
         <br />
@@ -41,9 +44,13 @@
         <%Else%>
 
         <asp:Label ID="confirmSent" runat="server" Text=""></asp:Label>
+        </h4>
 
         <!-- End your 'If' statement. -->
         <%End If%>
+         <div id="footer">
+            <p>&copy; 2014 Kyle Natoli - Assignment for Software Design and Development</p>
+        </div>
 
     </form>
 </body>

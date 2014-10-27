@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="~/css/stylesheet.css" />
     
 </head>
 <body>
@@ -45,13 +46,15 @@
     
         <br />
         <h1>Wicked Easy Recipes</h1>
-        Using 5 Ingredients or Less!
+        <h2>Using 5 Ingredients or Less!</h2>
         <br />
         <br />
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
-        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
-        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
-        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
+        <h4>
+       <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>&nbsp; |&nbsp;
+       <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>&nbsp; |&nbsp;
+       <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>&nbsp; |&nbsp;
+       <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ContactUs.aspx">Contact</asp:HyperLink>
+        </h4>
     
     </div>
         <p>
@@ -59,23 +62,55 @@
         </p>
         <p>
             &nbsp;</p>
+        <h4>
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="recipe_ID" DataSourceID="SqlDataSource1" Height="50px" Width="689px">
             <Fields>
-                <asp:BoundField DataField="recipe_Name" HeaderText="Recipe Name" SortExpression="recipe_Name" />
-                <asp:BoundField DataField="submitted_By" HeaderText="Submitted By" SortExpression="submitted_By" />
-                <asp:BoundField DataField="Ingredient_1" HeaderText="Ingredient #1" SortExpression="Ingredient_1" />
-                <asp:BoundField DataField="Ingredient_2" HeaderText="Ingredient #2" SortExpression="Ingredient_2" />
-                <asp:BoundField DataField="Ingredient_3" HeaderText="Ingredient #3" SortExpression="Ingredient_3" />
-                <asp:BoundField DataField="Ingredient_4" HeaderText="Ingredient #4" SortExpression="Ingredient_4" />
-                <asp:BoundField DataField="Ingredient_5" HeaderText="Ingredient #5" SortExpression="Ingredient_5" />
-                <asp:BoundField DataField="Preparation" HeaderText="Preparation" SortExpression="Preparation" />
-                <asp:BoundField DataField="Notes" HeaderText="Notes" SortExpression="Notes" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+                <asp:BoundField DataField="recipe_Name" HeaderText="Recipe Name" SortExpression="recipe_Name" >
+                <HeaderStyle BackColor="#FFFF99" ForeColor="DimGray" />
+                <ItemStyle BackColor="LightCoral" />
+                </asp:BoundField>
+                <asp:BoundField DataField="submitted_By" HeaderText="Submitted By" SortExpression="submitted_By" >
+                <HeaderStyle BackColor="#FFFF99" ForeColor="DimGray" />
+                <ItemStyle BackColor="LightCoral" />
+                </asp:BoundField>
+                <asp:BoundField DataField="Ingredient_1" HeaderText="Ingredient #1" SortExpression="Ingredient_1" >
+                <HeaderStyle BackColor="#FFFF99" ForeColor="DimGray" />
+                <ItemStyle BackColor="LightCoral" />
+                </asp:BoundField>
+                <asp:BoundField DataField="Ingredient_2" HeaderText="Ingredient #2" SortExpression="Ingredient_2" >
+                <HeaderStyle BackColor="#FFFF99" ForeColor="DimGray" />
+                <ItemStyle BackColor="LightCoral" />
+                </asp:BoundField>
+                <asp:BoundField DataField="Ingredient_3" HeaderText="Ingredient #3" SortExpression="Ingredient_3" >
+                <HeaderStyle BackColor="#FFFF99" ForeColor="DimGray" />
+                <ItemStyle BackColor="LightCoral" />
+                </asp:BoundField>
+                <asp:BoundField DataField="Ingredient_4" HeaderText="Ingredient #4" SortExpression="Ingredient_4" >
+                <HeaderStyle BackColor="#FFFF99" ForeColor="DimGray" />
+                <ItemStyle BackColor="LightCoral" />
+                </asp:BoundField>
+                <asp:BoundField DataField="Ingredient_5" HeaderText="Ingredient #5" SortExpression="Ingredient_5" >
+                <HeaderStyle BackColor="#FFFF99" ForeColor="DimGray" />
+                <ItemStyle BackColor="LightCoral" />
+                </asp:BoundField>
+                <asp:BoundField DataField="Preparation" HeaderText="Preparation" SortExpression="Preparation" >
+                <HeaderStyle BackColor="#FFFF99" ForeColor="DimGray" />
+                <ItemStyle BackColor="LightCoral" />
+                </asp:BoundField>
+                <asp:BoundField DataField="Notes" HeaderText="Notes" SortExpression="Notes" >
+                <HeaderStyle BackColor="#FFFF99" ForeColor="DimGray" />
+                <ItemStyle BackColor="LightCoral" />
+                </asp:BoundField>
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ButtonType="Button" />
+
             </Fields>
         </asp:DetailsView>
+            
         <div id="footer">
             <p>&copy; 2014 Kyle Natoli - Assignment for Software Design and Development</p>
+
         </div>
+            </h4>
     </form>
 </body>
 </html>
