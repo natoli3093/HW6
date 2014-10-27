@@ -43,13 +43,24 @@
             </UpdateParameters>
         </asp:SqlDataSource>
     
+        <br />
+        <h1>Wicked Easy Recipes</h1>
+        Using 5 Ingredients or Less!
+        <br />
+        <br />
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
+    
     </div>
         <p>
           <asp:Label ID="lbl_deletedRecipe" runat="server"></asp:Label>
         </p>
+        <p>
+            &nbsp;</p>
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="recipe_ID" DataSourceID="SqlDataSource1" Height="50px" Width="689px">
             <Fields>
-                <asp:BoundField DataField="recipe_ID" HeaderText="Recipe ID" InsertVisible="False" ReadOnly="True" SortExpression="recipe_ID" />
                 <asp:BoundField DataField="recipe_Name" HeaderText="Recipe Name" SortExpression="recipe_Name" />
                 <asp:BoundField DataField="submitted_By" HeaderText="Submitted By" SortExpression="submitted_By" />
                 <asp:BoundField DataField="Ingredient_1" HeaderText="Ingredient #1" SortExpression="Ingredient_1" />
@@ -62,6 +73,9 @@
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
             </Fields>
         </asp:DetailsView>
+        <div id="footer">
+            <p>&copy; 2014 Kyle Natoli - Assignment for Software Design and Development</p>
+        </div>
     </form>
 </body>
 </html>

@@ -38,7 +38,16 @@
                 <asp:Parameter Name="recipe_ID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/NewRecipe.aspx">Add a New Recipe</asp:HyperLink>
+        <br />
+        <h1>Wicked Easy Recipes</h1>
+        Using 5 Ingredients or Less!
+        <br/>
+        <br/>
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
+        <br />
         <br />
     
     </div>
@@ -50,6 +59,9 @@
                 <asp:HyperLinkField DataNavigateUrlFields="recipe_ID" DataNavigateUrlFormatString="RecipeDetails.aspx?recipe_ID={0}" Text="Select" />
             </Columns>
         </asp:GridView>
+        <div id="footer">
+            <p>&copy; 2014 Kyle Natoli - Assignment for Software Design and Development</p>
+        </div>
     </form>
 </body>
 </html>

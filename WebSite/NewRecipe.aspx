@@ -39,9 +39,19 @@
             </UpdateParameters>
         </asp:SqlDataSource>
     
+        <br />
+        <h1>Wicked Easy Recipes</h1>
+        Using 5 Ingredients or Less!<br />
+        <br />
+        <br />
+        <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ContactUs.aspx">Contact</asp:HyperLink>
+    
     </div>
         <p>
-            <asp:FormView ID="FormView1" runat="server" DataKeyNames="recipe_ID" DataSourceID="SqlDataSource1" DefaultMode="Insert" Height="270px" Width="343px">
+            <asp:FormView ID="FormView1" runat="server" DataKeyNames="recipe_ID" DataSourceID="SqlDataSource1" DefaultMode="Insert" Height="270px" Width="679px">
                 <EditItemTemplate>
                   
                 </EditItemTemplate>
@@ -53,6 +63,10 @@
                             </td>
                             <td>
                                 <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("recipe_Name") %>' />
+                                <asp:RequiredFieldValidator ID="rfv_recipename" runat="server" ControlToValidate="TextBox1" ErrorMessage="You Must Enter a Recipe Name!"></asp:RequiredFieldValidator>
+                                <td>
+                                    
+                                    &nbsp;</td>
                             </td>
                         </tr>
                         <tr>
@@ -61,6 +75,7 @@
                             </td>
                             <td>
                                 <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("submitted_By") %>' />
+                                <asp:RequiredFieldValidator ID="rfv_author" runat="server" ControlToValidate="TextBox2" ErrorMessage="You Must Enter the Author's Name!"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
@@ -69,6 +84,7 @@
                             </td>
                             <td>
                                 <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("Ingredient_1") %>' />
+                                <asp:RequiredFieldValidator ID="rfv_ingredient" runat="server" ControlToValidate="TextBox3" ErrorMessage="You Must Enter a Ingredient!"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
@@ -109,6 +125,7 @@
                             </td>
                             <td>
                                 <asp:TextBox ID="TextBox8" runat="server" Text='<%# Bind("Preparation") %>' />
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox8" ErrorMessage="You Must Specify the Preparation!"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
@@ -121,10 +138,10 @@
                         </tr>
                         <tr>
                             <td>
-                               <asp:Button ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" /> 
+                               <asp:Button ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Insert" Text="Save" /> 
                             </td>
                             <td>
-                                <asp:Button ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                              
                             </td>
                         </tr>
                     </table>
