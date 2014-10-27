@@ -32,9 +32,11 @@
                 fames ac ante ipsum primis in faucibus. Ut dui quam, imperdiet ornare est non, accumsan vulputate justo. Vestibulum sit amet erat a nunc 
         consectetur pellentesque. Aenean imperdiet tellus nec augue eleifend condimentum.</p>
             </div>
-        <div id="footer">
+        <h4>
+        <div>
             <p>&copy; 2014 Kyle Natoli - Assignment for Software Design and Development</p>
         </div>
+        </h4>
     </form>
 </body>
 </html>

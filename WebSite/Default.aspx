@@ -54,14 +54,22 @@
         <asp:GridView ID="GridView1" CssClass="gridview" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="recipe_ID" DataSourceID="SqlDataSource1" Width="1149px">
             <Columns>
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                <asp:BoundField DataField="recipe_Name" HeaderText="Recipe Name" SortExpression="recipe_Name" />
-                <asp:BoundField DataField="submitted_By" HeaderText="Submitted By" SortExpression="submitted_By" />
-                <asp:HyperLinkField DataNavigateUrlFields="recipe_ID" DataNavigateUrlFormatString="RecipeDetails.aspx?recipe_ID={0}" Text="Details" />
+                <asp:BoundField DataField="recipe_Name" HeaderText="Recipe Name" SortExpression="recipe_Name" >
+                <HeaderStyle ForeColor="DimGray" />
+                </asp:BoundField>
+                <asp:BoundField DataField="submitted_By" HeaderText="Submitted By" SortExpression="submitted_By" >
+                <HeaderStyle ForeColor="DimGray" />
+                </asp:BoundField>
+                <asp:HyperLinkField DataNavigateUrlFields="recipe_ID" DataNavigateUrlFormatString="RecipeDetails.aspx?recipe_ID={0}" Text="Select" />
             </Columns>
         </asp:GridView>
-        <div id="footer">
-            <p>&copy; 2014 Kyle Natoli - Assignment for Software Design and Development</p>
+        
+        <div>
+           
+           <h4>&copy; 2014 Kyle Natoli - Assignment for Software Design and Development</h4>
+                
         </div>
+        
     </form>
 </body>
 </html>

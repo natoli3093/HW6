@@ -153,8 +153,8 @@
                 </ItemTemplate>
             </asp:FormView>
         </p>
-         <div id="footer">
-            <p>&copy; 2014 Kyle Natoli - Assignment for Software Design and Development</p>
+         <div>
+            <h4>&copy; 2014 Kyle Natoli - Assignment for Software Design and Development</h4>
         </div>
     </form>
 </body>
